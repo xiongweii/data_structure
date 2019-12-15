@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @create: 2019-12-09 16:49
  */
 public class KMP {
-    public static int[] GetNextArray(char[] str2){
+    public static int[] GetNextArray(char[] str2){//str2为子串
         if(str2.length==1)
             return new int[]{-1};
         int[] next=new int[str2.length];
@@ -19,13 +19,14 @@ public class KMP {
         int cn=0;
         while(i<next.length){
             if(str2[i-1]==str2[cn]){
-//                next[i++]=next[i-1]+1;
+//                next[i]=next[i-1]+1;
+//                ++i;
 //                ++cn;
                 next[i++]=++cn;
             }else if(cn>0){
                 cn=next[cn];
             }else{
-                next[i++]=0;
+                next[i++]=0;//此时cn一定为0
             }
         }
         System.out.println("next数组："+Arrays.toString(next));
@@ -72,12 +73,11 @@ public class KMP {
                     break;
                 }
             }
+            if(i2==str2.length)
+                return i1-i2;
         }
-        if(i2==str2.length)
-            return i1-i2;
-        else{
             return -1;
-        }
+
     }
     public static StringBuilder intToSecond(int num){
         String res="";
@@ -98,10 +98,10 @@ public class KMP {
     }
     public static void main(String[] args){
         String str1="ababacbbadcf";
-        String str2="ababab";
+        String str2="abcabcb";
         System.out.println(KMP(str1,str2));
         System.out.println(Common(str1,str2));
-        System.out.println(intToSecond(150));
-        System.out.println(SecondToInt("0101011000100101"));
+//        System.out.println(intToSecond(150));
+//        System.out.println(SecondToInt("0101011000100101"));
     }
 }
