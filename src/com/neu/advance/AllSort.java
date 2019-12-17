@@ -1,6 +1,7 @@
 package com.neu.advance;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * @program: untitled
@@ -13,7 +14,7 @@ public class AllSort {
     public static char[] pridata="abc".toCharArray();
     public static  int N = pridata.length;
     public static char[] data=new char[N];
-    public static int[] book=new int[N];
+    public static int[] book=new int[N];//book储存每个卡牌的状态；
     public static void allSort(int n){//表示第n个箱子应该装什么
         if(n==N){
             System.out.println(Arrays.toString(data));
@@ -30,5 +31,7 @@ public class AllSort {
     }
     public static void main(String[] args){
      allSort(0);//从0号箱子里看
+        Scanner scanner=new Scanner(System.in);
+
     }
 }
