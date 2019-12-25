@@ -49,5 +49,6 @@ public class PlaceApple {
     public static void main(String[] args){
         //System.out.println(PlaceNum(200,100));
         System.out.println(PlaceNum2(200,100));
+
     }
 }
