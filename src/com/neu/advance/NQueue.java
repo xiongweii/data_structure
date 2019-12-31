@@ -1,7 +1,6 @@
 package com.neu.advance;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  * @program: untitled
@@ -17,12 +16,12 @@ public class NQueue {
         if(nIndex==N){
             M++;
             System.out.println(Arrays.toString(QueueColumm));
-            return;
+
         }
         int j=0;
         for(int i=0;i<N;i++){ //寻找当前皇后(nIndex)可能放的位置i->0:i->N-1
             for(j=0;j<nIndex;j++){//判断当前皇后(nIndex)与前[0-nIndex-1]的位置是否冲突
-                if(QueueColumm[j]==i||Math.abs(nIndex-j)==Math.abs(i-QueueColumm[j])){ //如果列冲突了；或者对角线冲突了，分别对应前后两个条件
+                if(QueueColumm[j]==i||Math.abs(nIndex-j)==Math.abs(i-QueueColumm[j])){ //如果列冲突了；或者对角线冲突了(当前点的横坐标和之前点的横坐标只差绝对值==当前点纵坐标和之前点的纵坐标绝对值相等，则说明对角线冲突)，分别对应前后两个条件
                     break;
                 }
             }
@@ -35,9 +34,6 @@ public class NQueue {
     public static void main(String[] args){
         nqueue(0);//表示当前n-1个皇后已经排列好，现在排第n个皇后
         System.out.println("方案数为"+M);
-        Scanner scanner=new Scanner(System.in);
-        String res=scanner.nextLine();
-        System.out.println(Arrays.toString(res.split(" ")));
 
     }
 }

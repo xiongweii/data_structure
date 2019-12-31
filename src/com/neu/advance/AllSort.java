@@ -11,7 +11,8 @@ import java.util.Scanner;
  * @create: 2019-12-15 15:07
  */
 public class AllSort {
-    public static char[] pridata="abc".toCharArray();
+    private static boolean[] ss;
+    public static char[] pridata="aa".toCharArray();
     public static  int N = pridata.length;
     public static char[] data=new char[N];
     public static int[] book=new int[N];//book储存每个卡牌的状态；
@@ -32,6 +33,8 @@ public class AllSort {
     public static void main(String[] args){
      allSort(0);//从0号箱子里看
         Scanner scanner=new Scanner(System.in);
-
+        char[] arrays={'a','b','c'};
+        String res=new String(arrays);
+        System.out.println(res);
     }
 }
