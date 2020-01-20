@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @create: 2019-12-15 12:51
  */
 public class NQueue {
-    public static int N=8;
+    public static int N=10;
     public static  int[] QueueColumm=new int[N];//QueueColumn[i]的值表示第i个皇后放在哪一列；每行代表一个皇后
     public static int M=0;
     public static void nqueue(int nIndex){
