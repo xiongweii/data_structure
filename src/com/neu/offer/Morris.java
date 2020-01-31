@@ -37,7 +37,6 @@ public class Morris {
                 {
                     mostRight.right=cur;
                     cur=cur.left;
-                    continue;//后面的cur=cur.right无须执行
                 }else{
                     mostRight.right=null;
                     cur=cur.right;//这里其实可以和后面的cur=cur.right合并成一步
@@ -63,7 +62,6 @@ public class Morris {
                     System.out.print(cur.val+" ");//注意这里
                     mostRight.right=cur;
                     cur=cur.left;
-                    continue;//后面的cur=cur.right无须执行
                 }else{
                     mostRight.right=null;
                     cur=cur.right;//这里其实可以和后面的cur=cur.right合并成一步

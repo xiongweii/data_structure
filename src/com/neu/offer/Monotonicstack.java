@@ -41,10 +41,10 @@ public class Monotonicstack {
        return res;
 
     }
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException {
         int[] test=new int[10];
         int[] arrays={3,5,2,4,6,0,1,5};
         Maxnums[] res=MaxNumsLeftAndRight(arrays);
-        System.out.println(res);
+
     }
 }
